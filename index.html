@@ -1,148 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - RoadVision AI</title>
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --text-color: #202124;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --border-color: #dadce0;
-        }
+        <li><strong>Google Gemini:</strong> For each AI feature you invoke, the backend forwards the submitted image and task prompt to Google’s Gemini API and returns the response. Google processes that content to provide the requested AI output under Google’s applicable terms and privacy practices. Review the [Google Privacy Policy](https://policies.google.com/privacy) and [Gemini API additional terms](https://ai.google.dev/gemini-api/terms). The app’s backend does not intentionally keep a permanent copy of submitted images or AI results, but processing by Google and infrastructure providers is governed by their terms and retention practices.</li>
+        <li><strong>Android share targets you select:</strong> When you use Share, Android presents available apps or services. The recipient you choose receives the share card and accompanying text, which may contain images, a message, a location description, GPS coordinates, date, and road recommendations. Those recipients handle the content under their own policies. Sharing is optional and controlled by you.</li>
+        <li><strong>Legal and safety disclosures:</strong> We may disclose information when reasonably necessary to comply with law, respond to valid legal process, protect users or the public, investigate abuse, or protect our rights and service.</li>
+      </ul>
+      <p>We do not sell personal information. The app does not include advertising or analytics SDKs in its current implementation. This may change only with an update to the app and this policy.</p>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 20px;
-        }
+      <h3>4. Storage and retention</h3>
+      <p>Original photos, generated images, and saved project records are stored locally on your device. You can delete saved projects from within the app; associated image files or temporary files may require deletion through Android storage controls. Uninstalling the app generally removes its private app data, but does not remove images you separately saved to your gallery or content already shared with another service. Temporary resized image files may remain in the app’s temporary storage until Android clears them.</p>
+      <p>Our backend handles image and prompt content to complete a request and does not intentionally save those contents as project history. It stores usage counters with expiry timestamps intended to support short-lived rate limiting (the configured expiry is approximately two days after the UTC day ends). Actual deletion depends on the Firebase/Firestore expiry configuration. Cloud service logs may be retained according to the Google Cloud project’s logging settings; those settings are not defined by the Android app. We cannot erase copies already received by Google Gemini or a share recipient; their retention is governed by their policies and settings.</p>
 
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            border: 1px solid var(--border-color);
-        }
+      <h3>5. Location, image metadata, and sensitive content</h3>
+      <p>RoadVision AI does not read location continuously or attach GPS coordinates to AI requests. GPS is obtained only after you press the optional location control on the share-card screen. If included, coordinates and any location text become visible to recipients of the share. Photos may depict people, vehicles, license plates, homes, or other identifying details. Do not submit content you do not have permission to use or disclose. Image resizing and JPEG recompression normally removes embedded metadata, but if an image cannot be decoded, it may be sent without that transformation; avoid relying on the app to remove all embedded metadata.</p>
 
-        h1 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
+      <h3>6. Your choices and rights</h3>
+      <p>You choose whether to grant camera or location permission, submit an image, generate a share card, and select a share recipient. You can deny permissions in Android settings, remove local projects in the app, clear app data or uninstall it, and avoid submitting identifying images or adding location details. To request information about or deletion of backend account or usage data, contact us at <a href="mailto:RoadVisionAI1@gmail.com">RoadVisionAI1@gmail.com</a> and include enough information for us to investigate; never send passwords or authentication tokens.</p>
+      <p>Depending on where you live, privacy laws may give you rights to access, correct, delete, restrict, or object to certain processing, or to complain to a regulator. Contact us to make a request. We may need to verify it and may retain information where law permits or requires. This app does not currently provide an in-app account deletion control.</p>
 
-        .effective-date {
-            color: #5f6368;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
+      <h3>7. Children</h3>
+      <p>RoadVision AI is not designed for children under 13, and we do not knowingly collect personal information directly from children under 13. If you believe a child has provided information through the service, contact us so we can review the request.</p>
 
-        h2 {
-            color: #174ea6;
-            font-size: 1.3em;
-            margin-top: 25px;
-            border-bottom: 1px solid #e8eaed;
-            padding-bottom: 5px;
-        }
+      <h3>8. Security and international processing</h3>
+      <p>Requests to the configured service use HTTPS, and the backend requires Firebase authentication and app attestation. No method of storage or transmission is completely secure. Google and any share recipient may process information in countries outside your own, subject to their terms and applicable law.</p>
 
-        p, ul {
-            margin-bottom: 15px;
-        }
+      <h3>9. Changes to this policy</h3>
+      <p>We may update this policy as the app changes or legal requirements evolve. We will update the effective date above and, where appropriate, provide notice in the app or through the distribution channel. Your continued use after an update means the updated policy applies to subsequent use, subject to applicable law.</p>
+    </article>
 
-        ul {
-            padding-left: 20px;
-        }
+    <article id="terms">
+      <h2>Terms and Conditions</h2>
+      <p>These Terms apply to your use of the RoadVision AI Android application. By installing or using the app, you agree to these Terms. If you do not agree, do not use the app.</p>
 
-        li {
-            margin-bottom: 8px;
-        }
+      <h3>1. The service</h3>
+      <p>RoadVision AI helps you submit road images for AI-generated analysis, visual road-improvement concepts, and planning suggestions. Features depend on a compatible Android device, permissions, an internet connection, and availability of our service and Google Gemini. We may change, suspend, or discontinue features as permitted by law.</p>
 
-        .contact-info {
-            background-color: #f1f3f4;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 20px;
-        }
+      <h3>2. Eligibility and responsible use</h3>
+      <p>You must be able to agree to these Terms under the law that applies to you. Use the app lawfully and responsibly. You may not misuse the service, interfere with its security or operation, attempt unauthorized access, circumvent usage limits, or use it to create or distribute unlawful or harmful content.</p>
 
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
+      <h3>3. Your images and other content</h3>
+      <p>You retain rights you hold in images, messages, and other material you provide. You grant us and the service providers described in the Privacy Policy a limited, non-exclusive permission to process that content as needed to operate, secure, and return the feature you request. You represent that you have the rights and permissions needed to submit the content and request its processing. Do not submit confidential, unlawful, or highly sensitive material unless you are entitled to do so and accept the processing described in the Privacy Policy.</p>
+      <p>You are responsible for deciding whether to share generated cards and for checking what they contain before sharing. Sharing sends the card and accompanying text to the recipient you select through Android’s share interface.</p>
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+      <h3>4. AI output and safety</h3>
+      <p>AI analysis, generated images, road-health scores, benefits, and municipal project suggestions are automated estimates and creative visualizations. They may be incomplete, inaccurate, outdated, or unrealistic. Generated images can alter details and do not establish that construction is feasible, approved, funded, safe, or completed.</p>
+      <p>Do not use the app’s outputs as engineering, surveying, traffic-safety, accessibility, emergency, legal, procurement, budgeting, or construction advice. Have qualified professionals and relevant authorities assess real-world decisions. Never rely on a generated image or score for an immediate safety decision or to represent actual road conditions without independent verification.</p>
 
-<div class="container">
-    <h1>Privacy Policy</h1>
-    <div class="effective-date">Effective Date: October 1, 2026</div>
+      <h3>5. Intellectual property</h3>
+      <p>We or our licensors own the app, its design, software, branding, and related materials. These Terms give you a personal, limited, revocable, non-transferable right to use the app for its intended purpose, subject to these Terms and applicable app-store rules. No other rights are granted. Rights in AI outputs may also be subject to Google’s terms and applicable law.</p>
 
-    <p>Welcome to <strong>RoadVision AI</strong>. We respect your privacy and are committed to protecting the personal data you share with us when using our Android application. This Privacy Policy explains how we collect, use, disclose, and safeguard your information.</p>
+      <h3>6. Third-party services</h3>
+      <p>The app relies on Google Firebase, Google Cloud, Google Gemini, Android, and any app or service you choose for sharing. Those services are provided by their respective operators and may have separate terms, privacy policies, availability, and costs. We do not control third-party services and are not responsible for their independent actions or content. Your use of them is subject to their applicable terms.</p>
 
-    <h2>1. Information We Collect</h2>
-    <p>Depending on how you use RoadVision AI, we may collect the following types of information:</p>
-    <ul>
-        <li><strong>Camera Data & Video Feeds:</strong> RoadVision AI uses your device's camera to analyze road conditions, detect objects, or assist in navigation. Processing is performed locally on your device whenever possible.</li>
-        <li><strong>Location Data:</strong> With your permission, we may collect precise or approximate geolocation data to provide location-based features, route mapping, and safety alerts.</li>
-        <li><strong>Device Information:</strong> We collect information about your mobile device, including hardware model, operating system version, unique device identifiers, and mobile network information.</li>
-        <li><strong>Usage Data:</strong> We automatically collect information about your interaction with the app, such as feature usage, crash logs, and performance diagnostics.</li>
-    </ul>
+      <h3>7. Availability, fees, and changes</h3>
+      <p>We currently provide the app without a charge from us, but internet, mobile data, Android, or third-party service charges may apply. We do not promise uninterrupted availability, error-free results, or that a particular AI model or feature will remain available. We may update these Terms when the service or law changes.</p>
 
-    <h2>2. How We Use Your Information</h2>
-    <p>We use the collected information for the following purposes:</p>
-    <ul>
-        <li>To provide, maintain, and improve the core features of RoadVision AI.</li>
-        <li>To process real-time computer vision analysis for driver assistance and safety warnings.</li>
-        <li>To analyze performance trends, fix bugs, and optimize application stability.</li>
-        <li>To comply with legal obligations and enforce our terms of service.</li>
-    </ul>
+      <h3>8. Disclaimers</h3>
+      <p>To the fullest extent permitted by law, the app and its outputs are provided “as is” and “as available,” without warranties of any kind, whether express, implied, or statutory, including warranties of accuracy, fitness for a particular purpose, availability, non-infringement, or suitability for actual road works. Some jurisdictions do not allow particular exclusions, so parts of this section may not apply to you.</p>
 
-    <h2>3. Data Storage and On-Device Processing</h2>
-    <p>RoadVision AI prioritizes user privacy by processing real-time camera video streams directly on your device. Video frames used for AI analysis are processed in memory and are not saved or transmitted to external servers unless you explicitly choose to upload feedback or crash reports.</p>
+      <h3>9. Limitation of liability</h3>
+      <p>To the fullest extent permitted by law, RoadVision AI and its operators will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, loss of data, or losses arising from reliance on AI outputs, third-party services, or content you choose to share. Our total liability for claims relating to the app will not exceed the amount you paid us to use the app in the 12 months before the event giving rise to the claim, or USD $10 if you paid nothing, except where applicable law does not permit that limitation. Nothing in these Terms excludes liability that cannot legally be excluded.</p>
 
-    <h2>4. App Permissions</h2>
-    <p>To function properly, RoadVision AI may request the following permissions on your Android device:</p>
-    <ul>
-        <li><strong>Camera:</strong> Required for real-time visual recognition and AI analysis.</li>
-        <li><strong>Location:</strong> Required for GPS-based features, tracking speeds, and contextual alerts.</li>
-        <li><strong>Storage:</strong> Required to save app configuration files or user-initiated recordings/screenshots.</li>
-    </ul>
-    <p>You can revoke these permissions at any time through your Android device settings.</p>
+      <h3>10. Suspension and termination</h3>
+      <p>You may stop using the app at any time by uninstalling it. We may suspend or end access if reasonably necessary to protect the service, comply with law, address misuse, or discontinue the app. Terms that by their nature should continue after use ends will remain effective.</p>
 
-    <h2>5. Third-Party Services</h2>
-    <p>The app may utilize third-party services that collect information used to identify you. These may include:</p>
-    <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
-        <li><a href="https://firebase.google.com/policies/analytics" target="_blank" rel="noopener">Firebase Analytics & Crashlytics</a></li>
-    </ul>
+      <h3>11. Governing law and disputes</h3>
+      <p>These Terms are subject to the laws that apply where the app operator is established, without limiting any mandatory consumer protections that apply in your country or region. Courts with jurisdiction under applicable law may hear disputes. The operator’s legal name and establishment address are not stated in the app materials reviewed for this policy; contact us to request that information.</p>
 
-    <h2>6. Data Security</h2>
-    <p>We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the internet or electronic storage is 100% secure.</p>
+      <h3>12. General</h3>
+      <p>If a court finds one part of these Terms unenforceable, the remaining parts continue to apply to the extent permitted. A failure to enforce a provision is not a waiver. These Terms, together with the Privacy Policy and applicable third-party terms, describe your use of the app. They do not remove rights that cannot be limited by law.</p>
+    </article>
 
-    <h2>7. Children's Privacy</h2>
-    <p>RoadVision AI is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us immediately so we can delete it.</p>
-
-    <h2>8. Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated "Effective Date." We encourage you to review this Privacy Policy periodically for any updates.</p>
-
-    <h2>9. Contact Us</h2>
-    <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at:</p>
-    
-    <div class="contact-info">
-        <strong>RoadVision AI Support Team</strong><br>
-        Email: <a href="mailto:roadvisionai1@gmail.com">roadvisionai1@gmail.com</a>
-    </div>
-</div>
-
+    <article id="contact">
+      <h2>Contact</h2>
+      <p>For privacy questions, data requests, or questions about these Terms, email <a href="mailto:RoadVisionAI1@gmail.com">RoadVisionAI1@gmail.com</a>. The app’s Settings screen lists the same contact address.</p>
+      <p class="small">This document describes the Android app’s implementation as reviewed on the effective date. If the app’s data flows change, this policy should be updated to match before release.</p>
+    </article>
+  </main>
+  <footer>© 2026 RoadVision AI</footer>
 </body>
 </html>
